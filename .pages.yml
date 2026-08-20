@@ -19,8 +19,8 @@ content:
             summary: "{fields.title.es}"
         fields:
           - name: image
-            label: Imagen
-            type: image
+            label: Enlace de la imagen
+            type: string
 
           - name: eyebrow
             label: Texto pequeño
@@ -98,13 +98,11 @@ content:
             label: ID del video de YouTube
             type: string
             required: false
-            description: "Pegue solamente el ID del video, no el enlace completo."
 
           - name: facebookUrl
             label: Enlace completo del video de Facebook
             type: string
             required: false
-            description: "Pegue el enlace completo de un video público de Facebook. Facebook tendrá prioridad sobre YouTube."
 
           - name: audioFile
             label: Archivo de audio
