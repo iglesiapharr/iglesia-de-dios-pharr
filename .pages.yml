@@ -21,33 +21,55 @@ content:
           - name: image
             label: Imagen
             type: image
+
           - name: eyebrow
             label: Texto pequeño
             type: object
             fields:
-              - {name: es, label: Español, type: string}
-              - {name: en, label: English, type: string}
+              - name: es
+                label: Español
+                type: string
+              - name: en
+                label: English
+                type: string
+
           - name: title
             label: Título
             type: object
             fields:
-              - {name: es, label: Español, type: string}
-              - {name: en, label: English, type: string}
+              - name: es
+                label: Español
+                type: string
+              - name: en
+                label: English
+                type: string
+
           - name: text
             label: Descripción
             type: object
             fields:
-              - {name: es, label: Español, type: text}
-              - {name: en, label: English, type: text}
+              - name: es
+                label: Español
+                type: text
+              - name: en
+                label: English
+                type: text
+
           - name: cta
             label: Texto del botón
             type: object
             fields:
-              - {name: es, label: Español, type: string}
-              - {name: en, label: English, type: string}
+              - name: es
+                label: Español
+                type: string
+              - name: en
+                label: English
+                type: string
+
           - name: link
             label: Enlace del botón
             type: string
+
       - name: sermon
         label: Sermón más reciente
         type: object
@@ -56,26 +78,43 @@ content:
             label: Título
             type: object
             fields:
-              - {name: es, label: Español, type: string}
-              - {name: en, label: English, type: string}
+              - name: es
+                label: Español
+                type: string
+              - name: en
+                label: English
+                type: string
+
           - name: speaker
             label: Predicador
             type: string
+
           - name: date
             label: Fecha
             type: string
             required: false
+
           - name: youtubeId
             label: ID del video de YouTube
             type: string
             required: false
+            description: "Pegue solamente el ID del video, no el enlace completo."
+
+          - name: facebookUrl
+            label: Enlace completo del video de Facebook
+            type: string
+            required: false
+            description: "Pegue el enlace completo de un video público de Facebook. Facebook tendrá prioridad sobre YouTube."
+
           - name: audioFile
             label: Archivo de audio
             type: file
             required: false
+
           - name: showVideo
             label: Mostrar video
             type: boolean
+
           - name: showAudio
             label: Mostrar audio
             type: boolean
