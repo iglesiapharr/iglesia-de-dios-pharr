@@ -1,0 +1,81 @@
+media:
+  input: uploads
+  output: /uploads
+
+content:
+  - name: site
+    label: Contenido del sitio
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - name: slides
+        label: Banners principales
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{fields.title.es}"
+        fields:
+          - name: image
+            label: Imagen
+            type: image
+          - name: eyebrow
+            label: Texto pequeño
+            type: object
+            fields:
+              - {name: es, label: Español, type: string}
+              - {name: en, label: English, type: string}
+          - name: title
+            label: Título
+            type: object
+            fields:
+              - {name: es, label: Español, type: string}
+              - {name: en, label: English, type: string}
+          - name: text
+            label: Descripción
+            type: object
+            fields:
+              - {name: es, label: Español, type: text}
+              - {name: en, label: English, type: text}
+          - name: cta
+            label: Texto del botón
+            type: object
+            fields:
+              - {name: es, label: Español, type: string}
+              - {name: en, label: English, type: string}
+          - name: link
+            label: Enlace del botón
+            type: string
+      - name: sermon
+        label: Sermón más reciente
+        type: object
+        fields:
+          - name: title
+            label: Título
+            type: object
+            fields:
+              - {name: es, label: Español, type: string}
+              - {name: en, label: English, type: string}
+          - name: speaker
+            label: Predicador
+            type: string
+          - name: date
+            label: Fecha
+            type: string
+            required: false
+          - name: youtubeId
+            label: ID del video de YouTube
+            type: string
+            required: false
+          - name: audioFile
+            label: Archivo de audio
+            type: file
+            required: false
+          - name: showVideo
+            label: Mostrar video
+            type: boolean
+          - name: showAudio
+            label: Mostrar audio
+            type: boolean
