@@ -70,6 +70,26 @@ content:
             label: Enlace del botón
             type: string
 
+      - name: schedule
+        label: Horarios de servicio
+        type: object
+        fields:
+          - name: sabbathSchool
+            label: Escuela Sabática
+            type: string
+
+          - name: worship
+            label: Culto de Adoración
+            type: string
+
+          - name: leadership
+            label: Escuela de Liderazgo Cristiano
+            type: string
+
+          - name: family
+            label: Ministerio Familiar y educación cristiana
+            type: string
+
       - name: sermon
         label: Sermón más reciente
         type: object
@@ -100,7 +120,7 @@ content:
             required: false
 
           - name: facebookUrl
-            label: Enlace completo del video de Facebook
+            label: Enlace o código iframe de Facebook
             type: string
             required: false
 
